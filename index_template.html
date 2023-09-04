@@ -11,59 +11,84 @@
     <script src="https://cdn.jsdelivr.net/npm/chosen-js@1.8.7/chosen.jquery.min.js" integrity="sha512-rMGGF4wg1R73ehtnxXBt5mbUfN9JUJwbk21KMlnLZDJh7BkPmeovBuddZCENJddHYYMkCh9hPFnPmS9sspki8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chosen-js@1.8.7/chosen.min.css" integrity="sha512-yVvxUQV0QESBt1SyZbNJMAwyKvFTLMyXSyBHDO4BG5t7k/Lw34tyqlSDlKIrIENIzCl+RVUNjmCPG+V/GMesRw==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <meta charset="UTF-8">
-    <style>
-        .chosen-container-multi .chosen-choices li.search-field input[type=text] {
-            height: 34px
-        }
-        .chosen-container-multi .chosen-choices li.search-choice {
-            border: 1px solid #ced4da;
-            line-height: 20px
-        }
-        
-        .input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
-            min-width: 100px
-        }
-        
-        .nav-tabs>li>.nav-link {
-            color: gray;
-            padding: 5px;
-            border-radius: 3px
-        }
-        
-        button.close {
-            padding: 0;
-            cursor: pointer;
-            background: 0 0;
-            border: 0;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none
-        }
-        
-        .close {
-            float: right;
-            font-size: 21px;
-            font-weight: 700;
-            line-height: 1;
-            color: #000;
-            text-shadow: 0 1px 0 #fff;
-            filter: alpha(opacity=20);
-            opacity: .2
-        }
-        
-        .accordion-button::after {
-            background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23333' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' d='M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z' clip-rule='evenodd'/%3e%3c/svg%3e");
-            transform: scale(.7)!important
-        }
-        
-        .accordion-button:not(.collapsed)::after {
-            background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23333' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' d='M0 8a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H1a1 1 0 0 1-1-1z' clip-rule='evenodd'/%3e%3c/svg%3e")
-        }
-    </style>
+<style>
+    .chosen-container-multi .chosen-choices li.search-field input[type=text] {
+        height: 34px;
+        background-color: #ffcc00; /* Fond jaune */
+        color: #ff0000; /* Texte gris */
+    }
+    
+    .chosen-container-multi .chosen-choices li.search-choice {
+        border: 1px solid #ffcc00;
+        line-height: 20px;
+        background-color: #ffea00;
+        color: #333;
+    }
+    
+    .input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+        min-width: 100px;
+        background-color: #f4f4f4;
+    }
+    
+    .nav-tabs>li>.nav-link {
+        color: #ff3366;
+        padding: 5px;
+        border-radius: 3px;
+        background-color: #ff99cc;
+    }
+    
+    button.close {
+        padding: 0;
+        cursor: pointer;
+        background: 0 0;
+        border: 0;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+    
+    .close {
+        float: right;
+        font-size: 21px;
+        font-weight: 700;
+        line-height: 1;
+        color: #00cc66;
+        text-shadow: 0 1px 0 #fff;
+        filter: alpha(opacity=20);
+        opacity: .2;
+    }
+    
+    .accordion-button::after {
+        background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%2300ff99' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' d='M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z' clip-rule='evenodd'/%3e%3c/svg%3e");
+        transform: scale(.7)!important;
+    }
+    
+    .accordion-button:not(.collapsed)::after {
+        background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%2300ff99' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' d='M0 8a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H1a1 1 0 0 1-1-1z' clip-rule='evenodd'/%3e%3c/svg%3e");
+    }
+
+    /* Ajout de couleurs amusantes */
+    .container {
+        background-color: #f0f0f0; /* Fond gris clair */
+    }
+
+    h1 {
+        color: #ff6600; /* Texte orange vif */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombre textuelle */
+    }
+
+    .form-control {
+        background-color: #fff; /* Fond blanc */
+    }
+
+    .form-select {
+        background-color: #fff000; /* Fond gris doux */
+    }
+</style>
 </head>
 
 <body>
-    <h1 class="text-center text-muted">rcX - Shell Generator</h1>
+    <h1 class="text-center text-muted"><font color='red'>rcX - Shell Generator by Trhacknon</font></h1>
     <div class="container">
         <form id="form" class="form">
             <div class="input-group mb-3">
